@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Elegance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#1a1a1a',
+                        light: '#f5f5f5',
+                        accent: '#a1a1a1',
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light text-dark">
+    <!-- Header Section -->
+    <header class="border-b border-accent/10 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex justify-between items-center">
+                <div class="text-xl font-bold">ELEGANCE</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+                    <a href="#" class="hover:text-accent transition-colors">Products</a>
+                    <a href="about.html" class="hover:text-accent transition-colors">About</a>
+                    <a href="contact.html" class="hover:text-accent transition-colors">Contact</a>
+                    <a href="wishlist.html" class="hover:text-accent transition-colors flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                        Wishlist
+                    </a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </nav>
+            <div id="mobile-menu" class="md:hidden hidden py-3 space-y-3 shadow-inner">
+                <a href="index.html" class="block hover:text-accent transition-colors">Home</a>
+                <a href="#" class="block hover:text-accent transition-colors">Products</a>
+                <a href="about.html" class="block hover:text-accent transition-colors">About</a>
+                <a href="contact.html" class="block hover:text-accent transition-colors">Contact</a>
+                <a href="wishlist.html" class="block hover:text-accent transition-colors flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    Wishlist
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="py-12 bg-dark text-light">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-2xl font-bold mb-3">Our Collection</h1>
+            <p class="text-accent text-sm max-w-xl mx-auto leading-relaxed">Discover our complete range of handcrafted handbags and shoes, each piece a testament to our commitment to quality and timeless design.</p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="py-8 border-b border-accent/10 shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="category-btn active px-5 py-2 text-sm border border-dark rounded-lg shadow-sm" data-category="all">All Products</button>
+                <button class="category-btn px-5 py-2 text-sm border border-accent/30 text-accent hover:border-dark hover:text-dark rounded-lg shadow-sm" data-category="handbags">Handbags</button>
+                <button class="category-btn px-5 py-2 text-sm border border-accent/30 text-accent hover:border-dark hover:text-dark rounded-lg shadow-sm" data-category="shoes">Shoes</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Handbag 1 -->
+                <div class="group product-card shadow-md hover:shadow-xl rounded-xl overflow-hidden" data-category="handbags">
+                    <div class="relative overflow-hidden mb-4 max-w-xs mx-auto">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Leather handbag" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-dark bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="product-detail.html?id=tote1" class="text-light text-sm font-medium px-4 py-2 border border-light rounded-lg hover:bg-light hover:text-dark transition-colors">View Details</a>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-5">
+                        <h3 class="text-lg font-medium"><a href="product-detail.html?id=tote1" class="hover:text-accent transition-colors">Classic Leather Tote</a></h3>
+                        <p class="text-accent text-sm">Premium craftsmanship</p>
+                    </div>
+                </div>
+                
+                <!-- Shoe 1 -->
+                <div class="group product-card shadow-md hover:shadow-xl rounded-xl overflow-hidden" data-category="shoes">
+                    <div class="relative overflow-hidden mb-4 max-w-xs mx-auto">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="Elegant heels" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-dark bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="product-detail.html?id=heels1" class="text-light text-sm font-medium px-4 py-2 border border-light rounded-lg hover:bg-light hover:text-dark transition-colors">View Details</a>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-5">
+                        <h3 class="text-lg font-medium"><a href="product-detail.html?id=heels1" class="hover:text-accent transition-colors">Stiletto Evening Heels</a></h3>
+                        <p class="text-accent text-sm">Sophisticated design</p>
+                    </div>
+                </div>
+                
+                <!-- Handbag 2 -->
+                <div class="group product-card shadow-md hover:shadow-xl rounded-xl overflow-hidden" data-category="handbags">
+                    <div class="relative overflow-hidden mb-4 max-w-xs mx-auto">
+                        <img src="https://images.unsplash.com/photo-1575032617751-6ddec2089882?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="Crossbody bag" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-dark bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="product-detail.html?id=crossbody1" class="text-light text-sm font-medium px-4 py-2 border border-light rounded-lg hover:bg-light hover:text-dark transition-colors">View Details</a>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-5">
+                        <h3 class="text-lg font-medium"><a href="product-detail.html?id=crossbody1" class="hover:text-accent transition-colors">Minimalist Crossbody</a></h3>
+                        <p class="text-accent text-sm">Everyday elegance</p>
+                    </div>
+                </div>
+                
+                <!-- Shoe 2 -->
+                <div class="group product-card shadow-md hover:shadow-xl rounded-xl overflow-hidden" data-category="shoes">
+                    <div class="relative overflow-hidden mb-4 max-w-xs mx-auto">
+                        <img src="https://images.unsplash.com/photo-1560343776-97e7d202ff0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="Oxford shoes" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-dark bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="product-detail.html?id=oxford1" class="text-light text-sm font-medium px-4 py-2 border border-light rounded-lg hover:bg-light hover:text-dark transition-colors">View Details</a>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-5">
+                        <h3 class="text-lg font-medium"><a href="product-detail.html?id=oxford1" class="hover:text-accent transition-colors">Classic Oxford Shoes</a></h3>
+                        <p class="text-accent text-sm">Timeless craftsmanship</p>
+                    </div>
+                </div>
+                
+                <!-- Handbag 3 -->
+                <div class="group product-card shadow-md hover:shadow-xl rounded-xl overflow-hidden" data-category="handbags">
+                    <div class="relative overflow-hidden mb-4 max-w-xs mx-auto">
+                        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80" alt="Clutch bag" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-dark bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="product-detail.html?id=clutch1" class="text-light text-sm font-medium px-4 py-2 border border-light rounded-lg hover:bg-light hover:text-dark transition-colors">View Details</a>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-5">
+                        <h3 class="text-lg font-medium"><a href="product-detail.html?id=clutch1" class="hover:text-accent transition-colors">Evening Clutch</a></h3>
+                        <p class="text-accent text-sm">Elegant simplicity</p>
+                    </div>
+                </div>
+                
+                <!-- Shoe 3 -->
+                <div class="group product-card shadow-md hover:shadow-xl rounded-xl overflow-hidden" data-category="shoes">
+                    <div class="relative overflow-hidden mb-4 max-w-xs mx-auto">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Sneakers" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-dark bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="product-detail.html?id=sneakers1" class="text-light text-sm font-medium px-4 py-2 border border-light rounded-lg hover:bg-light hover:text-dark transition-colors">View Details</a>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-5">
+                        <h3 class="text-lg font-medium"><a href="product-detail.html?id=sneakers1" class="hover:text-accent transition-colors">Minimalist Sneakers</a></h3>
+                        <p class="text-accent text-sm">Casual sophistication</p>
+                    </div>
+                </div>
+                
+                <!-- Handbag 4 -->
+                <div class="group product-card shadow-md hover:shadow-xl rounded-xl overflow-hidden" data-category="handbags">
+                    <div class="relative overflow-hidden mb-4 max-w-xs mx-auto">
+                        <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="Backpack" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-dark bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="product-detail.html?id=backpack1" class="text-light text-sm font-medium px-4 py-2 border border-light rounded-lg hover:bg-light hover:text-dark transition-colors">View Details</a>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-5">
+                        <h3 class="text-lg font-medium"><a href="product-detail.html?id=backpack1" class="hover:text-accent transition-colors">Leather Backpack</a></h3>
+                        <p class="text-accent text-sm">Modern functionality</p>
+                    </div>
+                </div>
+                
+                <!-- Shoe 4 -->
+                <div class="group product-card shadow-md hover:shadow-xl rounded-xl overflow-hidden" data-category="shoes">
+                    <div class="relative overflow-hidden mb-4 max-w-xs mx-auto">
+                        <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=812&q=80" alt="Ankle boots" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-dark bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="product-detail.html?id=boots1" class="text-light text-sm font-medium px-4 py-2 border border-light rounded-lg hover:bg-light hover:text-dark transition-colors">View Details</a>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-5">
+                        <h3 class="text-lg font-medium"><a href="product-detail.html?id=boots1" class="hover:text-accent transition-colors">Leather Ankle Boots</a></h3>
+                        <p class="text-accent text-sm">Versatile elegance</p>
+                    </div>
+                </div>
+                
+                <!-- Handbag 5 -->
+                <div class="group product-card shadow-md hover:shadow-xl rounded-xl overflow-hidden" data-category="handbags">
+                    <div class="relative overflow-hidden mb-4 max-w-xs mx-auto">
+                        <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Shoulder bag" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-dark bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="product-detail.html?id=shoulder1" class="text-light text-sm font-medium px-4 py-2 border border-light rounded-lg hover:bg-light hover:text-dark transition-colors">View Details</a>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-5">
+                        <h3 class="text-lg font-medium"><a href="product-detail.html?id=shoulder1" class="hover:text-accent transition-colors">Structured Shoulder Bag</a></h3>
+                        <p class="text-accent text-sm">Architectural design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-accent/10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-lg font-bold mb-2">ELEGANCE</div>
+                    <p class="text-accent text-sm">Timeless style, exceptional quality</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-accent hover:text-dark transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-accent hover:text-dark transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-accent hover:text-dark transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-accent hover:text-dark transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-accent/10 text-center">
+                <p class="text-accent text-xs">&copy; 2023 Elegance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Elegance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#1a1a1a',
+                        light: '#f5f5f5',
+                        accent: '#a1a1a1',
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light text-dark">
+    <!-- Header Section -->
+    <header class="border-b border-accent/10 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex justify-between items-center">
+                <div class="text-xl font-bold">ELEGANCE</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+                    <a href="products.html" class="hover:text-accent transition-colors">Products</a>
+                    <a href="#" class="hover:text-accent transition-colors">About</a>
+                    <a href="contact.html" class="hover:text-accent transition-colors">Contact</a>
+                    <a href="wishlist.html" class="hover:text-accent transition-colors flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                        Wishlist
+                    </a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </nav>
+            <div id="mobile-menu" class="md:hidden hidden py-3 space-y-3 shadow-inner">
+                <a href="index.html" class="block hover:text-accent transition-colors">Home</a>
+                <a href="products.html" class="block hover:text-accent transition-colors">Products</a>
+                <a href="#" class="block hover:text-accent transition-colors">About</a>
+                <a href="contact.html" class="block hover:text-accent transition-colors">Contact</a>
+                <a href="wishlist.html" class="block hover:text-accent transition-colors flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    Wishlist
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="py-12 bg-dark text-light">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-2xl font-bold mb-3">Our Story</h1>
+            <p class="text-accent text-sm max-w-xl mx-auto leading-relaxed">Discover the passion and craftsmanship behind our brand, and the values that guide everything we create.</p>
+        </div>
+    </section>
+
+    <!-- Brand Story Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 reveal">
+                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Workshop" class="w-full h-auto shadow-md rounded-xl">
+                </div>
+                <div class="md:w-1/2 reveal">
+                    <h2 class="text-xl font-bold mb-4">Our Beginning</h2>
+                    <p class="text-dark mb-6 leading-relaxed">Founded in 2010, Elegance began as a small workshop dedicated to creating handcrafted leather goods that would stand the test of time. Our founder, Elena Moretti, combined her Italian heritage and passion for traditional craftsmanship with modern, minimalist design principles.</p>
+                    <p class="text-dark leading-relaxed">What started as a small collection of leather handbags has grown into a comprehensive range of accessories that maintain the same dedication to quality and attention to detail that defined our very first creations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-16 bg-dark text-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-xl font-bold mb-10 text-center">Our Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 border border-accent/10 rounded-xl shadow-md hover:shadow-lg transition-shadow reveal">
+                    <h3 class="text-lg font-medium mb-3">Craftsmanship</h3>
+                    <p class="text-accent leading-relaxed">Every stitch, every cut, and every finish is executed with precision and care. We believe that true luxury lies in the details that others might overlook.</p>
+                </div>
+                <div class="p-6 border border-accent/10 rounded-xl shadow-md hover:shadow-lg transition-shadow reveal">
+                    <h3 class="text-lg font-medium mb-3">Sustainability</h3>
+                    <p class="text-accent leading-relaxed">We source our materials responsibly and design our products to last for years, not seasons. Our commitment to sustainability guides every decision we make.</p>
+                </div>
+                <div class="p-6 border border-accent/10 rounded-xl shadow-md hover:shadow-lg transition-shadow reveal">
+                    <h3 class="text-lg font-medium mb-3">Timeless Design</h3>
+                    <p class="text-accent leading-relaxed">We create pieces that transcend trends, focusing on clean lines, balanced proportions, and functional elegance that remains relevant year after year.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craftspeople Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-xl font-bold mb-10 text-center">Our Craftspeople</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex flex-col md:flex-row gap-6 items-center reveal">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Craftsman" class="w-32 h-32 object-cover rounded-full shadow-md">
+                    <div>
+                        <h3 class="text-lg font-medium mb-2">Marco Bianchi</h3>
+                        <p class="text-accent mb-3">Master Leather Artisan</p>
+                        <p class="text-dark leading-relaxed">With over 25 years of experience, Marco leads our workshop with unparalleled expertise in traditional Italian leather working techniques.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-center reveal">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="Designer" class="w-32 h-32 object-cover rounded-full shadow-md">
+                    <div>
+                        <h3 class="text-lg font-medium mb-2">Sophia Chen</h3>
+                        <p class="text-accent mb-3">Head Designer</p>
+                        <p class="text-dark leading-relaxed">Sophia brings her background in architecture and fashion to create designs that balance form and function with a distinctive minimalist aesthetic.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-center reveal">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Craftsman" class="w-32 h-32 object-cover rounded-full shadow-md">
+                    <div>
+                        <h3 class="text-lg font-medium mb-2">David Kowalski</h3>
+                        <p class="text-accent mb-3">Shoe Specialist</p>
+                        <p class="text-dark leading-relaxed">David's family has been making shoes for three generations. His expertise in footwear construction ensures comfort without compromising on style.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-center reveal">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt="Quality Control" class="w-32 h-32 object-cover rounded-full shadow-md">
+                    <div>
+                        <h3 class="text-lg font-medium mb-2">Amara Johnson</h3>
+                        <p class="text-accent mb-3">Quality Control Manager</p>
+                        <p class="text-dark leading-relaxed">With an eye for detail and unwavering standards, Amara ensures that every piece that leaves our workshop meets our exacting quality requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-accent/10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-lg font-bold mb-2">ELEGANCE</div>
+                    <p class="text-accent text-sm">Timeless style, exceptional quality</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-accent hover:text-dark transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-accent hover:text-dark transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-accent hover:text-dark transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-accent hover:text-dark transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-accent/10 text-center">
+                <p class="text-accent text-xs">&copy; 2023 Elegance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
